@@ -1,7 +1,7 @@
 "use strict"
 
-var util = require('../logic/util');
-var passengers = require('../logic/passengers');
+var util = require('util');
+var passengers = require('passengers');
 
 function onCalculateNumberOfFlights() {
     let passengers = document.getElementById('passengers').value;
@@ -12,7 +12,9 @@ function onCalculateNumberOfFlights() {
           " flight(s) to carry " + passengers + " passengers";
     } catch (error) {
         document.getElementById('flights').innerHTML = error; 
-    } 
+    } finally {
+        console.log("You inserted " + passengers + " passengers and " + capacity + " as capacity");
+    }
 }
 
 function onCalculateTotalFinalPrice(object) {
