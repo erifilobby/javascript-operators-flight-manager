@@ -1,3 +1,5 @@
+"use strict"
+
 function Flights() {
     function calculateNumberOfFlights(passengers, capacity) {
         let flights;
@@ -42,3 +44,4 @@ function Flights() {
 }
 
 module.exports = Flights();
+
